@@ -34,5 +34,5 @@ while IFS= read -r app_path; do
 
     # Uninstall Adobe software
     "/Library/Application Support/Adobe/Adobe Desktop Common/HDBox/Setup" --uninstall=1 --sapCode=${code} --baseVersion=${major_version}.0 --platform=${chip} --deleteUserPreferences=false
-    echo "Adobe ${app_name} mit der Version ${version} im Ordner '${app_path}' wurde gefunden und entfernt."
+    echo "Adobe ${app_name} with version ${version} found in folder '${app_path}' was deleted."
 done <<< "$app_paths"
