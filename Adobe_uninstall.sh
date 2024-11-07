@@ -23,7 +23,7 @@ app_paths=$(find /Applications -type d -maxdepth 2 -name "Adobe ${app_name}*.app
 # Check if "find" found something
 if [ -z "$app_paths" ]; then
     echo "Kein passender Ordner für '${app_name}' gefunden."
-    exit 1
+    exit 0
 fi
 
 # Loop for all found Adobe installations
