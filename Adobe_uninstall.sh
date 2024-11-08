@@ -14,15 +14,15 @@ else
 fi
 
 # Name of the Adobe product and sapCode
-app_name=$4
-code=$5
+app_name=$2
+code=$3
 
 # Find command to list all directories that match "Adobe <app_name>" pattern
 app_paths=$(find /Applications -type d -maxdepth 2 -name "Adobe ${app_name}*.app" 2>/dev/null)
 
 # Check if "find" found something
 if [ -z "$app_paths" ]; then
-    echo "Kein passender Ordner für '${app_name}' gefunden."
+    echo "No matching folder found for '${app_name}'."
     exit 0
 fi
 
